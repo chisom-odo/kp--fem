@@ -121,6 +121,21 @@ svg {
 }
 
 /* utility classes */
+
+
+.visually-hidden {
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;  
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .text-primary-400 {
   color: var(--clr-primary-400);
 }
@@ -240,17 +255,16 @@ body {
   color: var(--clr-accent-100);
   text-decoration: none;
   cursor: pointer;
-  box-shadow:0 1.125em 1em -1em var(--clr-accent-500) ;
+  box-shadow: 0 1.125em 1em -1em var(--clr-accent-500);
   line-height: 1;
-  
 }
 
-.button[data-type="inverted"]{
+.button[data-type="inverted"] {
   background-color: var(--clr-neutral-100);
   color: var(--clr-accent-400);
 }
-.button[data-type = "inverted"]:hover,
-.button[data-type = "inverted"]:focus-visible {
+.button[data-type="inverted"]:hover,
+.button[data-type="inverted"]:focus-visible {
   background-color: var(--clr-accent-100);
   color: var(--clr-accent-300);
 }
@@ -260,14 +274,32 @@ body {
   background-color: var(--clr-accent-300);
 }
 
-input{
+input {
   border: 0;
   border-radius: 100vmax;
   padding: 1.25em 2.5em;
   font-weight: var(--fw--bold);
-  font-size: var(--fs-button);;
+  font-size: var(--fs-button);
   background-color: var(--clr-accent-100);
   text-decoration: none;
   cursor: pointer;
   line-height: 1;
+}
+
+/* navigation */
+
+.primary--header{
+  margin-top:var(--size-600);
+}
+
+
+.mobile-nav-toggle{
+cursor:pointer ;
+background: transparent;
+border: 0;
+padding: 0.5rem;
+}
+
+.mobile-nav-toggle .icon-close{
+  display: none;
 }
